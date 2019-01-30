@@ -1,4 +1,5 @@
 # Multi-Object-Tracking-Paper-List
+Some new works could be found in the MOT16、MOT17 ranking list, but it seems that no work opening their source code in recent months, so I did not update the source code list. Sometimes, I think that the MOT benchmark may lead the researchers to a wrong direction. The MOT17 benchmark provides three kinds of detection results: DPM, Faster RCNN and SDP, if you analyse the results based on different detections, you would find that most trackers has similar performance on Faster RCNN and SDP detections. The trackers ranking well mostly rely on the good performance on DPM detections and they have similar performance with DeepSort when adopting Faster RCNN and SDP detections. So if you want to improve your MOTA score, focus on DPM result.<br>  
 Multi-object tracking is a deeply explored but not successfully solved computer vision task. This filed needs more open sources and more standard evaluation metrics. Opening source code is not the characteristic for this field（maybe the large number of parameters waited to be tuned)......  This is a paper list for multi-object-tracking.
 ## Datasets
 [PETS2009](http://www.cvg.reading.ac.uk/PETS2009/a.html) : An old dataset.<br>
@@ -11,12 +12,15 @@ Multi-object tracking is a deeply explored but not successfully solved computer 
 [NVIDIA AI CITY Challenge](https://www.aicitychallenge.org/): Challenges including "Traffic Flow Analysis", "Anomaly Detection" and "Multi-sensor Vehicle Detection and Reidentification", you may find some insteresting codes on their [Github repos](https://github.com/NVIDIAAICITYCHALLENGE)<br>
 [Vis Drone](http://www.aiskyeye.com/views/index): Tracking videos captured by drone-mounted cameras.<br>
 [JTA Dataset](http://imagelab.ing.unimore.it/imagelab/page.asp?IdPage=25): A huge dataset for pedestrian pose estimation and tracking in urban scenarios created by exploiting the highly photorealistic video game Grand Theft Auto V developed by Rockstar North.<br>
+[Baidu Trajectory](http://apolloscape.auto/trajectory.html) Interesting dataset for trajectory prediction for Autonomous drive, wait to be opened.<br>
+[Path Track](http://people.ee.ethz.ch/~daid/pathtrack/) A new dataset with many scenes.<br>
 ## Overview
 P Emami,PM Pardalos,L Elefteriadou,S Ranka "Machine Learning Methods for Solving Assignment Problems in Multi-Target Tracking" [[paper]](http://xueshu.baidu.com/s?wd=paperuri%3A%28dcfbdc0f8f79fe44d9166fd2481e37aa%29&filter=sc_long_sign&tn=SE_xueshusource_2kduw22v&sc_vurl=http%3A%2F%2Farxiv.org%2Fpdf%2F1802.06897&ie=utf-8&sc_us=15766836095004964816)<br>
 Wenhan Luo, Junliang Xing, Anton Milan, Xiaoqin Zhang, Wei Liu, Xiaowei Zhao and Tae-Kyun Kim, "Multiple Object Tracking: A Literature Review" [[paper]](http://pdfs.semanticscholar.org/3dff/acda086689c1bcb01a8dad4557a4e92b8205.pdf)<br>
 ## Evaluation Metric
 **CLEAR MOT** : Bernardin, K. & Stiefelhagen, R. "Evaluating Multiple Object Tracking Performance: The CLEAR MOT Metric" [[paper]](https://cvhci.anthropomatik.kit.edu/images/stories/msmmi/papers/eurasip2008.pdf)<br>
 **IDF1** : Ristani, E., Solera, F., Zou, R., Cucchiara, R. & Tomasi, C. "Performance Measures and a Data Set for Multi-Target, Multi-Camera Tracking" [[paper]](https://users.cs.duke.edu/~ristani/bmtt2016/ristani2016MTMC.pdf)<br>
+**Evaluation Code**: [[Python]](https://github.com/cheind/py-motmetrics)<br> 
 ## Researcher
 **Anton Milan** [[webpage and his source code]](http://www.milanton.de/)<br>
 **Laura Leal-Taixé** [[webpage and her source code]](https://lealtaixe.github.io/publications/)<br>
@@ -29,6 +33,7 @@ Some source codes in above webpage are not listed in below Open Source.Such as:<
 "Learning an image-based motion context for multiple people tracking"<br> 
 ## Open Source
 ### Batch
+**NT** Longyin Wen*, Dawei Du*, Shengkun Li, Xiao Bian, Siwei Lyu Learning Non-Uniform Hypergraph for Multi-Object Tracking, In AAAI 2019 [[paper]](http://www.cs.albany.edu/~lsw/papers/aaai19a.pdf)[[code]](https://github.com/longyin880815) Waited!<br>
 **headTracking**: Shun Zhang, Jinjun Wang, Zelun Wang, Yihong Gong,Yuehu Liu: "Multi-Target Tracking by Learning Local-to-Global Trajectory Models" in PR 2015 [[paper]](https://www.researchgate.net/publication/265295656_Multi-Target_Tracking_by_Learning_Local-to-Global_Trajectory_Models) [[code]](https://github.com/gengshan-y/headTracking) seems like a repo.<br>
 **IOU** : E. Bochinski, V. Eiselein, T. Sikora. "High-Speed Tracking-by-Detection Without Using Image Information" [[paper]](http://elvera.nue.tu-berlin.de/files/1517Bochinski2017.pdf) [[code]](https://github.com/bochinski/iou-tracker/) In International Workshop on Traffic and Street Surveillance for Safety and Security at IEEE AVSS 2017, 2017. <br>
 **NMGC-MOT** Andrii Maksai, Xinchao Wang, Franc¸ois Fleuret, and Pascal Fua "Non-Markovian Globally Consistent Multi-Object Tracking
@@ -41,6 +46,9 @@ Some source codes in above webpage are not listed in below Open Source.Such as:<
 **KSP** : J. Berclaz, F. Fleuret, E. Türetken and P. Fua "Multiple Object Tracking using K-Shortest Paths Optimization" [[paper]](https://cvlab.epfl.ch/files/content/sites/cvlab2/files/publications/publications/2011/BerclazFTF11.pdf) [[code]](https://cvlab.epfl.ch/software/ksp)  IEEE Transactions on Pattern Analysis and Machine Intelligence, 2011.<br>
 **GMCP** : Amir Roshan Zamir, Afshin Dehghan, and Mubarak Shah "GMCP-Tracker: Global Multi-object Tracking Using Generalized Minimum Clique Graphs" [[paper]](http://crcv.ucf.edu/papers/eccv2012/GMCP-Tracker_ECCV12.pdf) [[code]](http://crcv.ucf.edu/projects/GMCP-Tracker/) European Conference on Computer Vision (ECCV), 2012.<br>
 ### Online
+**LSST** Weitao Feng, Zhihao Hu, Wei Wu, Junjie Yan, Wanli Ouyang "Multi-Object Tracking with Multiple Cues and Switcher-Aware Classification" [[paper]](https://arxiv.org/abs/1901.06129) SOA tracker on MOT ranking list. No code now.<br>
+**MOTBeyondPixels** Sarthak Sharma*, Junaid Ahmed Ansari*, J. Krishna Murthy, and K. Madhava Krishna Beyond Pixels: Leveraging Geometry and Shape Cues for Online Multi-Object Tracking In ICRA 2018 [[paper]](https://arxiv.org/abs/1802.09298)[[code]](https://github.com/JunaidCS032/MOTBeyondPixels)<br>
+**SST** Sun. S., Akhtar, N., Song, H., Mian A., & Shah M. (2018). Deep Affinity Network for Multiple Object Tracking[[paper]](https://arxiv.org/abs/1810.11780)[[code]](https://github.com/shijieS/SST): Interesting work and expect the author to update their DPM tracking results on MOT17 benchmark.<br>
 **MOTDT** Long Chen, Haizhou Ai "Real-time Multiple People Tracking with Deeply Learned Candidate Selection and Person Re-identification" in ICME 2018 [[code]](https://github.com/longcw/MOTDT)[[paper]](https://www.researchgate.net/publication/326224594_Real-time_Multiple_People_Tracking_with_Deeply_Learned_Candidate_Selection_and_Person_Re-identification)!<br>
 **TMPORT** : E. Ristani and C. Tomasi. Tracking Multiple People Online and in Real Time. in ACCV 2014 [[paper]](https://users.cs.duke.edu/~tomasi/papers/ristani/ristaniAccv14.pdf) [[code]](http://vision.cs.duke.edu/DukeMTMC/)<br>
 **MOT-RNN** : Anton Milan, Seyed Hamid Rezatofighi, Anthony Dick, Konrad Schindler, Ian Reid "Online Multi-target Tracking using Recurrent Neural Networks"[[paper]](http://www.milanton.de/files/aaai2017/aaai2017-anton-rnntracking.pdf) [[code]](https://bitbucket.org/amilan/rnntracking) In AAAI 2017.<br>
